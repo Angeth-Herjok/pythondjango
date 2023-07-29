@@ -12,3 +12,10 @@ class Cart(models.Model):
     date_added=models.DateField()
 
 
+
+
+
+
+
+
+
