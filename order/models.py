@@ -18,6 +18,6 @@ class Order(models.Model):
 
     cart=models.ForeignKey(Cart, null=True, on_delete=models.CASCADE)
     customers=models.OneToOneField(Customers, null=True, on_delete=models.CASCADE)
-    shipment=models.ManyToManyField(Shipment, null=True, blank=True)
+    shipment=models.ManyToManyField(Shipment, blank=True)
 
    
