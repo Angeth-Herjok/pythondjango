@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+
+<body>
+    <!-- <table>
+        <th>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Price</td>
+            <td>Product Details</td>
+        </th>
+        {% for product in products %}
+        <tr>
+            <td>{{product.title}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td><a href="{% url 'product_detail_view' id=product.id%}">view</a></td>
+        </tr>
+        {% endfor %}
+    </table> -->
+    <h1 class="heading">All Products Available</h1>
+    <div class="allproducts">
+        {% for product in products %}
+            <div class="product-container">
+                <img src="{{product.image.url}}" class="img"/>
+                <h1 class="product-name">{{ product.name }}</h1>
+
+                 <a href="{% url 'product_detail_view' id=product.id %}"><button class="viewbutton">View Details</button></a>
+                 <a href="{% url 'product_update' id=product.id %}"><button class="editbutton">Edit Details</button></a>
+                 <a href="{% url 'delete_product_view' id=product.id %}"><button class="deletebutton">Delete Details</button></a>
+            </div>
+        {% endfor %}
+    </div>
+    <style>
+
+    .heading {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .allproducts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product-container {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .product-name {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .viewbutton,
+    .editbutton {
+        background-color: green;
+        color: #fff;
+        border: none;
+        padding: 15px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        text-decoration: none;
+        
+    }
+
+    .editbutton {
+        background-color: green;
+    }
+
+    .deletebutton {
+        background-color: rgb(100, 12, 12);
+        color: #fff;
+        border: none;
+        padding: 15px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+     
+    </style>
+</body>
+</html>

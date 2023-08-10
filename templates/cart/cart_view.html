@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<body>
+<!--     
+    <h1>Cart Page</h1>
+<table>
+    <thead> -->
+        <!-- <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Image</th>
+            <th>Date Added</th>
+        </tr> -->
+    <!-- </thead> -->
+    <!-- <tbody>
+        {% for cart_item in cart_items %}
+        <tr>
+            <td>{{ cart_item.name }}</td>
+            <td>{{ cart_item.price }}</td>
+            <td>{{ cart_item.quantity }}</td>
+            <td><img src="{{ cart_item.image.url }}" alt="{{ cart_item.name }}" width="50">view</td>
+            <td>{{ cart_item.date_added }}</td>
+            <a href="{% url 'add_to_cart' id=cart_item.id %}"><button>Add To Cart</button></a> -->
+            <!-- <a href="{% url 'add_to_cart' cart_item_id=cart_item.id %}"><button>Add To Cart</button></a> -->
+        <!-- </tr> -->
+        <!-- {% endfor %} -->
+    <!-- </tbody> -->
+<!-- </table>  -->
+
+<h1>Cart Page</h1>
+<ul>
+    {% for cart_item in cart_items %}
+    <li>  <img src="{{cart_item.image.url}}" alt="{{cart_item.name}}" width="50">
+          Name: ${{ cart_item.name }}
+          Price: ${{cart_item.price }}
+          Quantity: ${{cart_item.quantity }}
+          Date_added: ${{cart_item.date_added}}
+          
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

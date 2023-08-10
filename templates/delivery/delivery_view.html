@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+</head>
+<body>
+    
+    <h1>Delivery Page</h1>
+    <ul>
+        {% for delivery in deliveries %}
+        <li>  
+              Company_name: ${{ delivery.company_name }}
+              Shipper: ${{delivery.shipper }}
+              Recipient_name: ${{ delivery.recipient }}
+              Delivery_order_number: ${{delivery.delivery_order_number }}
+              
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    
+    <h1>Contact Page</h1>
+<ul>
+    {% for contact in contacts %}
+    <li>  
+          Name: ${{ contact.name }}
+          Phone_number: ${{contact.phone_number }}
+          Email: ${{ contact.email }}
+          social_media_links: ${{contact.social_media_links }}
+          
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
+
