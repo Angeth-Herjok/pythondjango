@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vendor List</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin-left: 10%;
+    }
+    .vendor-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+    .vendor-item {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .vendor-img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .vendor-details {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    h1 {
+        margin-bottom: 20px;
+        margin-left: 40%;
+    }
+    p {
+        margin: 5px 0;
+        font-weight: bold;
+    }
+</style>
+<body>
+
+    <h1>Vendor List</h1>
+    <ul class="vendor-list">
+        {% for vendor in vendors %}
+        <li class="vendor-item">
+            <img src="{{ vendor.image.url }}" class="vendor-img"/>
+            <p>First Name:</p> {{ vendor.first_name }}<br>
+            <p>Last Name:</p> {{ vendor.last_name }}<br>
+            <p>Age:</p> {{ vendor.age }}<br>
+            <p>Gender:</p> {{ vendor.gender }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,9 +1,7 @@
 from django.urls import path
-from .views import shipment_view
-from .views import shipment
-
+from .views import shipment_list, create_shipment
 
 urlpatterns = [
-    path("shipments/shipment/", shipment, name='shipment'),
-    path("shipments/shipment_view", shipment_view, name='shipment_view'),
+    path('', shipment_list, name='shipment_list'),
+    path('create/', create_shipment, name='create_shipment'),
 ]

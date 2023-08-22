@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+</head>
+<body>
+ 
+
+    <h1>Customer Page</h1>
+    <form method="POST" class="upload_form">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1{
+            margin-left: 43%;
+        }
+        .upload_form {
+            max-width: 400px;
+            min-height: 100px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #f8f8f8;
+        }
+        .upload_form button {
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload_form button:hover {
+            background-color: black;
+        }
+    </style>
+   
+   
+   
+    
+</body>
+</html>
+

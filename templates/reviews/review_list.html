@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+</head>
+<body>
+
+
+{% block content %}
+  <h1>Reviews</h1>
+  <ul class="review-list">
+   
+      <li>
+        <p>Name: {{ review.name }}</p><br>
+       <p> Comment: {{ review.comment }}</p>
+      </li>
+  
+  </ul>
+{% endblock %}
+
+
+<style>
+
+body{
+    margin-left: 40%;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+}
+
+.review-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.review-list li p {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+</style>
+
+    
+</body>
+</html>

@@ -7,22 +7,7 @@
 </head>
 
 <body>
-    <!-- <table>
-        <th>
-            <td>Title</td>
-            <td>Description</td>
-            <td>Price</td>
-            <td>Product Details</td>
-        </th>
-        {% for product in products %}
-        <tr>
-            <td>{{product.title}}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.price}}</td>
-            <td><a href="{% url 'product_detail_view' id=product.id%}">view</a></td>
-        </tr>
-        {% endfor %}
-    </table> -->
+
     <h1 class="heading">All Products Available</h1>
     <div class="allproducts">
         {% for product in products %}
@@ -50,7 +35,7 @@
         justify-content: space-between;
     }
 
-    .product-container {
+    .product-container { 
         border: 1px solid #ddd;
         padding: 10px;
         margin-bottom: 20px;

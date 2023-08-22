@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+
+
+    <h1>Payment List</h1>
+    <ul class="payment-list">
+      <li class="payment-item">
+        <p>Payee Name: {{ payment.payee_name }}</p>
+        <p>Payee Address: {{ payment.payee_address }}</p>
+        <p>Payment Amount: {{ payment.payment_amount }}</p>
+      </li>
+      
+    </ul>
+  
+
+
+
+    <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-left: 20%;
+      margin-top: 10%;
+
+    }
+    
+    .payment-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .payment-item {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .payment-item p {
+      margin: 5px 0;
+    }
+    
+    h1 {
+      margin-top: 0;
+    }
+
+    </style>
+
+
+</body>
+</html>

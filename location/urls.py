@@ -1,9 +1,6 @@
 from django.urls import path
-from .views import location_view
-from .views import location
-
+from .views import create_location
 
 urlpatterns = [
-    path("location/location_view/", location_view, name='location_view'),
-    path("location/location", location, name='location'),
+    path('create/', create_location, name='create_location'),
 ]

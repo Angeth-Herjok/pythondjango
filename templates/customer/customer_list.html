@@ -7,18 +7,24 @@
 </head>
 <body>
     
-    <h1>Customer Page</h1>
-    <ul>
+    <h1>Customers Page</h1>
+  
+    <div class="allcustomers">
         {% for customer in customers %}
-        <li>  
-              First_name: ${{ customer.first_name }}
-              Second_name: ${{customer.second_name }}
-              Gender: ${{ customer.gender }}
-              Age: ${{customer.age }}
-              
-        </li>
-        {% endfor %}
-    </ul>
+            <div class="customer-container">
+                <!-- <img src="{{customer.image.url}}" class="img"/> -->
+                <h1 class="customer-name">{{ customer.first_name }}</h1>
+                
+                 <a href="{% url 'customer_detail_view' id=customer.id %}">view details</a><br>
+                 <a href="{% url 'customer_update' id=customer.id %}">edit details</a><br>
+                 <a href="{% url 'customer_delete' id=customer.id %}">Delete</a>
 
+
+              
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
+
+

@@ -6,45 +6,59 @@
     <title>Cart</title>
 </head>
 <body>
-<!--     
-    <h1>Cart Page</h1>
-<table>
-    <thead> -->
-        <!-- <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Image</th>
-            <th>Date Added</th>
-        </tr> -->
-    <!-- </thead> -->
-    <!-- <tbody>
+
+
+<h1>Cart Page</h1> 
+    <ul class="cart-list">
         {% for cart_item in cart_items %}
-        <tr>
-            <td>{{ cart_item.name }}</td>
-            <td>{{ cart_item.price }}</td>
-            <td>{{ cart_item.quantity }}</td>
-            <td><img src="{{ cart_item.image.url }}" alt="{{ cart_item.name }}" width="50">view</td>
-            <td>{{ cart_item.date_added }}</td>
-            <a href="{% url 'add_to_cart' id=cart_item.id %}"><button>Add To Cart</button></a> -->
-            <!-- <a href="{% url 'add_to_cart' cart_item_id=cart_item.id %}"><button>Add To Cart</button></a> -->
-        <!-- </tr> -->
-        <!-- {% endfor %} -->
-    <!-- </tbody> -->
-<!-- </table>  -->
+        <li class="cart-item">
+            <img src="{{ cart_item.image.url }}" alt="{{ cart_item.name }}">
+            <p>Name: {{ cart_item.product_name }}</p>
+            <p>Price: {{ cart_item.product_price }}</p>
+            <p>Quantity: {{ cart_item.quantity }}</p>
+            <p>Date Added: {{ cart_item.date_added }}</p>
+        </li>
+        {% endfor %}
+    </ul>
 
-<h1>Cart Page</h1>
-<ul>
-    {% for cart_item in cart_items %}
-    <li>  <img src="{{cart_item.image.url}}" alt="{{cart_item.name}}" width="50">
-          Name: ${{ cart_item.name }}
-          Price: ${{cart_item.price }}
-          Quantity: ${{cart_item.quantity }}
-          Date_added: ${{cart_item.date_added}}
-          
-    </li>
-    {% endfor %}
-</ul>
 
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .cart-list {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-item {
+            background-color: white;
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+        .cart-item img {
+            max-width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .cart-item p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        h1 {
+            margin: 20px;
+        }
+</style>
+
+ 
 </body>
-</html>
+</html> 
+

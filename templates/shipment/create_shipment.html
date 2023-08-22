@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment</title>
+</head>
+<body>
+    
+    <h1 class="heading">Create Shipment</h1>
+
+    {% block content %}
+      <div class="shipment-form">
+        <form method="post">
+          {% csrf_token %}
+          
+          <div class="form-group">
+            <label for="{{ form.tracking_number.id_for_label }}">Tracking Number:</label>
+            {{ form.tracking_number }}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.status.id_for_label }}">Status:</label>
+            {{ form.status }}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.date_created.id_for_label }}">Date Created:</label>
+            {{ form.date_created }}
+          </div>
+
+          <div class="form-group">
+            <label for="{{ form.date_shipped.id_for_label }}">Date Shipped:</label>
+            {{ form.date_shipped }}
+          </div>
+
+          <button class="btn-submit" type="submit">Create Shipment</button>
+        </form>
+      </div>
+    {% endblock %}
+
+
+    <style>
+
+.heading{
+    margin-left: 42%;
+}
+     
+.shipment-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-submit:hover {
+  background-color: green;
+}
+
+    </style>
+    
+    
+    
+</body>
+</html>

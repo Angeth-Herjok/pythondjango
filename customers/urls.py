@@ -1,9 +1,13 @@
 from django.urls import path
-from .views import customer_list
-from .views import customer
+# from. import views
+from .views import customer_detail_view
 
 
 urlpatterns = [
-    path("customers/customer/", customer, name='customer'),
-    path("customers/customer_list", customer_list, name='customer_list'),
+    path("customers/upload/",customer_detail_view, name = "customer_detail_view"),
+    # path("customer/list/",views.customer_list,name="customer_list_view"),
+    # path("customer/edit/<int:id>/",views.customer_update_view,name="customer_update"),
+    # path("customer/delete/<int:id>/",views.delete_customer,name="customer_delete"),
+ 
 ]
+
