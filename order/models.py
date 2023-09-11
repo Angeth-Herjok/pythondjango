@@ -1,8 +1,10 @@
 from django.db import models
 # from basket.models import Basket
-from cart.models import Cart
+# from cart.models import Cart
 from customers.models import Customers
 from shipment.models import Shipment
+from cart.models import Cart, CartItem
+
 
 # Create your models here.
 class Order(models.Model):
